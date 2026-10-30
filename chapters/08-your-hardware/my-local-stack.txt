@@ -1,0 +1,6 @@
+# chapter 8 (ch08:109-114), as printed. the book's example for a 16GB laptop. 32000 is well above the ~4k default under 24GB (chapter 8 README), so treat it as a placeholder:
+# replace the model and context with the ones that ran smoothly on your machine, and keep this file next to ~/litellm/config.yaml.
+# my-local-stack.txt — tuned for this machine
+# model:   qwen2.5-coder:7b-instruct-q4_K_M
+# context: OLLAMA_CONTEXT_LENGTH=32000
+# (pull the model once; export the context length when you start the server)

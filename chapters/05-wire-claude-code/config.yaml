@@ -1,0 +1,11 @@
+# config.yaml — chapter 5 (ch05:95-105), as printed. ./install.sh claude copies it to ~/litellm/config.yaml.
+# left: the name claude asks for. right: the model ollama runs. put a model you pulled on the right.
+model_list:
+  - model_name: "claude-3-5-sonnet"        # the heavy-thinking requests
+    litellm_params:
+      model: "ollama_chat/qwen2.5-coder"
+      api_base: "http://localhost:11434"
+  - model_name: "claude-3-5-haiku"         # the quick, cheap requests
+    litellm_params:
+      model: "ollama_chat/qwen2.5-coder:3b"
+      api_base: "http://localhost:11434"

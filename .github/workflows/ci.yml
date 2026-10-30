@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: command -v shellcheck || { if command -v brew >/dev/null; then brew install shellcheck; else sudo apt-get update && sudo apt-get install -y shellcheck; fi; }
+      - run: shellcheck -s bash $(git ls-files '*.sh')
+      - run: bash tests/run.sh

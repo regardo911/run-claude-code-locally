@@ -2,7 +2,7 @@
 
 **Claude Code, Codex or OpenCode answering from an open model on your own machine, set up with the book's own config files.**
 
-Companion files to the book *Run Claude Code Locally* · [youcanbuildthings.com](https://youcanbuildthings.com)
+Companion files to the book [*Run Claude Code Locally*](https://amzn.to/4ay1KdP) (Amazon)
 
 The book's config files and scripts, filed by chapter. `./install.sh claude` drops the Claude Code pair into `~/litellm/`. Two names to know. **Ollama** runs the model on your machine, port 11434 ([chapter 4](chapters/04-first-local-agent/README.md)). **LiteLLM** is the small proxy on port 4000 that turns Claude Code's requests into ones Ollama understands ([chapter 5](chapters/05-wire-claude-code/README.md)). Codex and OpenCode talk to Ollama directly, so they skip the proxy. Find your line below.
 
